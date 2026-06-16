@@ -12,22 +12,28 @@
         body { font-family: 'Inter', sans-serif; background-color: #f3f0e2; color: #0a1f1c; }
         h1, h2 { font-family: 'Playfair Display', serif; }
         
-       
+        /* Efeito de Vidro Refinado (Glassmorphism) nos Cards */
         .card-projeto {
-            background: #1b441d;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            border: 1px solid #446e3e;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .card-projeto:hover { transform: translateY(-10px); }
+        
+        .card-projeto:hover { 
+            transform: translateY(-6px); 
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(74, 222, 128, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
         
         .sidebar-icon {
             font-size: 1.2rem;
             color: #ebeec8;
             margin-bottom: 2rem;
             display: grid;
-            
         }
     </style>
 </head>
@@ -38,7 +44,6 @@
         <a href="#sobre" class="sidebar-icon"><i class="fa-solid fa-house"></i></a>
         <a href="#projetos" class="sidebar-icon"><i class="fa-solid fa-microscope"></i></a>
         <a href="#certificados" class="sidebar-icon"><i class="fa-solid fa-certificate"></i></a>
-        
     </aside>
     
     <section id="home" class="relative min-h-screen flex items-center px-10 md:px-32 overflow-hidden">
@@ -46,35 +51,28 @@
             <span class="text-green-700 font-semibold tracking-widest uppercase text-sm">Desenvolvedora & Bióloga</span> <br><br>
             <h3>Olá! Me chamo </h3>
             <h1 class="text-6xl md:text-8xl mt-4 mb-6 text-[#0a1f1c]">Júlia <br><span class="text-green-800">Carolina</span></h1>
-           
-            
         </div>
 
         <div class="absolute right-0 bottom-0 w-full lg:w-1/2 h-full opacity-20 lg:opacity-100">
             <img src="download-removebg-preview.png" alt="Perfil" class="h-full w-full object-cover">
         </div>
     </section>
-    </section>
 
-   <div class="relative">
-    <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20" style="transform: translateY(-99%);">
-        <svg xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 1440 320" 
-             preserveAspectRatio="none" 
-             class="w-full h-[15vh] md:h-[25vh]"> 
-            <path fill="#0a1f1c" fill-opacity="1" d="M0,32L26.7,42.7C53.3,53,107,75,160,80C213.3,85,267,75,320,64C373.3,53,427,43,480,69.3C533.3,96,587,160,640,192C693.3,224,747,224,800,202.7C853.3,181,907,139,960,144C1013.3,149,1067,203,1120,208C1173.3,213,1227,171,1280,154.7C1333.3,139,1387,149,1413,154.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
-        </svg>
+    <div class="relative">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20" style="transform: translateY(-99%);">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 viewBox="0 0 1440 320" 
+                 preserveAspectRatio="none" 
+                 class="w-full h-[15vh] md:h-[25vh]"> 
+                <path fill="#0a1f1c" fill-opacity="1" d="M0,32L26.7,42.7C53.3,53,107,75,160,80C213.3,85,267,75,320,64C373.3,53,427,43,480,69.3C533.3,96,587,160,640,192C693.3,224,747,224,800,202.7C853.3,181,907,139,960,144C1013.3,149,1067,203,1120,208C1173.3,213,1227,171,1280,154.7C1333.3,139,1387,149,1413,154.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+            </svg>
+        </div>
     </div>
-</div>
 
-    <section id="sobre" class="py-24 bg-[#0a1f1c] text-white px-10 md:px-32 relative z-10">
-        </section>
-
-    <section id="sobre" class="pt-4 pb-24 bg-[#0a1f1c] text-white px-10 md:px-32 relative z-10 -mt-20 md:-mt-32">
+    <section id="sobre" class="pt-4 pb-24 bg-[#0a1f1c] text-white px-10 md:px-32 relative z-10">
         <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div class="flex gap-6 items-start">
                 <div class="p-4 bg-green-900/50 rounded-lg text-2xl"><i class="fa-solid fa-dna text-green-300"></i></div>
-                
                 <div>
                     <h3 class="text-xl font-bold mb-2">Biologia</h3>
                     <p class="text-gray-400">Biologia, com especialização em gestão ambiental.</p>
@@ -84,137 +82,138 @@
                 <div class="p-4 bg-green-900/50 rounded-lg text-2xl"><i class="fa-solid fa-laptop-code text-green-300"></i></div>
                 <div>
                     <h3 class="text-xl font-bold mb-2">Desenvolvimento</h3>
-                    <p class="text-gray-400">Lógica de programação e  desenvolvimento web.</p>
+                    <p class="text-gray-400">Lógica de programação e desenvolvimento web.</p>
                 </div>
             </div>
-           
         </div>
-        
     </section>
+
     <section class="pb-24 bg-[#0a1f1c] text-white px-10 md:px-32 relative z-10">
-      <h2 class="pl-6 text-4xl mb-14">Sobre Mim</h2>
-    <div class="max-w-3xl mx-auto border-l-2 border-green-800 pl-8">
-        <h2 class="text-sm uppercase tracking-widest text-green-500 mb-6 font-semibold">Minha Trajetória</h2>
-
-        <div class="space-y-8 text-gray-300 font-light leading-relaxed">
-            <h3 class="text-xl md:text-2xl">
-                Sou formada em <b class="text-white">Ciências Biológicas pela UNESP</b>, com especialização em Gestão Ambiental pela Universidade Anhembi Morumbi. Ao longo da minha trajetória, desenvolvi uma forte conexão com a área ambiental e educacional, atuando com educação ambiental e também como professora, experiências que fortalecem minha comunicação, didática e capacidade de adaptação a diferentes ambientes.
-            </h3>
-
-            <h3 class="text-xl md:text-2xl">
-                Mais recentemente trabalhei como técnica de laboratório na Faculdade Anhanguera, onde tive a oportunidade de aprofundar meus conhecimentos práticos, organização de processos, documentação, e trabalho em equipe em ambiente acadêmico.
-            </h3>
-
-            <h3 class="text-xl md:text-2xl">
-                Atualmente, curso <span class="text-green-400">Desenvolvimento de Software Multiplataforma</span>, ampliando minha formação com foco em tecnologia e inovação. Busco aplicar minha base analítica e científica na criação de soluções eficientes e com impacto positivo. <p> <a href="https://lattes.cnpq.br/5355107837522728" target="_blank" class="text-green-400 underline">Acesse meu currículo Lattes</a></p> </h3>
-            
+        <h2 class="pl-6 text-4xl mb-14">Sobre Mim</h2>
+        <div class="max-w-3xl mx-auto border-l-2 border-green-800 pl-8">
+            <h2 class="text-sm uppercase tracking-widest text-green-500 mb-6 font-semibold">Minha Trajetória</h2>
+            <div class="space-y-8 text-gray-300 font-light leading-relaxed">
+                <h3 class="text-xl md:text-2xl">
+                    Sou formada em <b class="text-white">Ciências Biológicas pela UNESP</b>, com especialização em Gestão Ambiental pela Universidade Anhembi Morumbi. Ao longo da minha trajetória, desenvolvi uma forte conexão com a área ambiental e educacional, atuando com educação ambiental e também como professora, experiências que fortalecem minha comunicação, didática e capacidade de adaptação a diferentes ambientes.
+                </h3>
+                <h3 class="text-xl md:text-2xl">
+                    Mais recentemente trabalhei como técnica de laboratório na Faculdade Anhanguera, onde tive a oportunidade de aprofundar meus conhecimentos práticos, organização de processos, documentação, e trabalho em equipe em ambiente acadêmico.
+                </h3>
+                <h3 class="text-xl md:text-2xl">
+                    Atualmente, curso <span class="text-green-400">Desenvolvimento de Software Multiplataforma</span>, ampliando minha formação com foco em tecnologia e inovação. Busco aplicar minha base analítica e científica na criação de soluções eficientes e com impacto positivo. <p> <a href="https://lattes.cnpq.br/5355107837522728" target="_blank" class="text-green-400 underline">Acesse meu currículo Lattes</a></p> </h3>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="projetos" class="pb-24 bg-[#0a1f1c] text-white px-10 md:px-32">
         <h2 class="text-4xl mb-12">Projetos</h2>
         <div class="grid md:grid-cols-3 gap-8">
             
-            
-             <a href="#modal-radar" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                    <img src="logo-lumina.png" alt="Radar Cidadão" class="w-full h-48 object-cover mb-4">
-               
+            <a href="#modal-radar" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-3xl text-green-400"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
                 </div>
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p>Radar Cidadão</p>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Python</span>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Html</span>
-                    </div>
-            
+                <h3 class="text-xl font-semibold mb-3 text-white">Radar Cidadão</h3>
+                <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Transparência e acessibilidade a dados de Deputados Federais.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">Python</span>
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">HTML</span>
                 </div>
             </a>
-           <a href="#modal-site" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                    <img src="Captura de tela 2026-05-16 165838.png" alt="SITE" class="w-full h-48 object-cover mb-4">
-               
-                </div>
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p>Primeiro Site</p>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">W3CSS</span>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Html</span>
-                    </div>
-                </div>
-            </a>
-             <a href="#modal-pibid" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                    <img src="93cb37a1ff75b4853c915e6e02986448.png" alt="PIBID" class="w-full h-48 object-cover mb-4">
-               
-                </div>
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p> PIBID</p> 
-                      <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">CAPES</span>  
-                    </div>
-                </div> 
-            </a>    
 
+            <a href="#modal-site" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-3xl text-green-400"><i class="fa-solid fa-globe"></i></div>
+                    <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Primeiro Site</h3>
+                <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Interface web institucional simulando uma faculdade fictícia.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">W3CSS</span>
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">HTML</span>
+                </div>
+            </a>
+            <a href="#modal-serpentes" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-3xl text-green-400"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Chaves Dicotomicas Herpetelogicas</h3>
+                <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Site para identificação de serpentes no estado de São Paulo.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">FLASK</span>
+                    <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">DOCKER</span>
+                </div>
+            </a>  
         </div>
     </section>
-      <section id="experiencia" class="pb-24 bg-[#0a1f1c] text-white px-10 md:px-32">
-        <h2 class="text-4xl mb-12">Projetos Extracurriculares</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            
-             <a href="#modal-obmep" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                    <img src="WhatsApp Image 2026-05-15 at 21.08.10.jpeg" alt="OBMEP" class="w-full h-48 object-cover mb-4">
-               
-                </div>
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p>OBMEP</p>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Olimpíada Brasileira de Matemática</span>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Trabalho voluntário</span>
-                        
-                    </div>
-                </div>
-            </a>
-            
-        </div>
+
+   <section id="extracurriculares" class="pb-24 bg-[#0a1f1c] text-white px-10 md:px-32">
+    <h2 class="text-4xl mb-12">Projetos Extracurriculares</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
         
-        </section>        
+        <a href="#modal-obmep" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-3xl text-green-400"><i class="fa-solid fa-calculator"></i></div>
+                <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">OBMEP</h3>
+            <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Trabalho voluntário na Olimpíada Brasileira de Matemática.</p>
+            <div class="flex gap-2 flex-wrap">
+                <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">Voluntariado</span>
+            </div>
+        </a>
+
+        <a href="#modal-maratona" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-3xl text-green-400"><i class="fa-solid fa-trophy"></i></div>
+                <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Maratona InterFatecs</h3>
+            <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Lógica, algoritmos e o balão da conquista!</p>
+            <div class="flex gap-2 flex-wrap">
+                <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">Competição</span>
+            </div>
+        </a>
+
+        <a href="#modal-pibid" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-3xl text-green-400"><i class="fa-solid fa-seedling"></i></div>
+                <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">PIBID</h3>
+            <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Iniciação à Docência pela CAPES na Universidade UNESP.</p>
+            <div class="flex gap-2 flex-wrap">
+                <span class="text-[11px] bg-green-500/10 text-green-300 border border-green-500/20 px-2.5 py-1 rounded-md font-medium">CAPES</span>
+            </div>
+        </a> 
+
+    </div> </section>
 
     <section id="experiencia" class="pb-24 bg-[#0a1f1c] text-white px-10 md:px-32">
         <h2 class="text-4xl mb-12">Experiência</h2>
         <div class="grid md:grid-cols-3 gap-8">
-             <a href="#modal-professora" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                      <img src="pngtree-cozy-classroom-setting-with-chalkboard-and-bookshelves-image_18879294.webp" alt="Professora" class="w-full h-48 object-cover mb-4">
-               
+             <a href="#modal-professora" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-3xl text-green-400"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
                 </div>
-                
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p>Professora</p>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Secretaria de Estado da Educação</span>
-                        
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Professora</h3>
+                <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Docência em Ciências Biológicas na Secretaria de Estado da Educação.</p>
             </a>
-             <a href="#modal-laboratorio" class="card-projeto shadow-sm cursor-pointer block">
-                <div class="h-48 bg-green-100 overflow-hidden">
-                    <img src="images.jpg" alt="Técnico de Laboratório" class="w-full h-48 object-cover mb-4">
-               
+
+             <a href="#modal-laboratorio" class="card-projeto p-6 cursor-pointer block relative overflow-hidden group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-3xl text-green-400"><i class="fa-solid fa-flask"></i></div>
+                    <div class="text-gray-500 group-hover:text-green-400 transition-colors"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></div>
                 </div>
-                <div class="p-6">
-                    <div class="flex gap-2">
-                      <p>Técnico de laboratório</p>
-                        <span class="text-xs bg-green-800 text-green-300 px-2 py-1 rounded">Anhanguera Educacional </span>
-                        
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Técnico de Laboratório</h3>
+                <p class="text-sm text-gray-400 mb-6 font-light line-clamp-2">Gestão de processos e suporte acadêmico na Anhanguera.</p>
             </a>
         </div>
-        
-        </section>
+    </section>
 
     <footer id="certificados" class="py-12 border-t border-gray-200 text-center">
         <div class="flex justify-center gap-6 text-2xl">
@@ -222,71 +221,202 @@
             <a href="https://github.com/juliacarolina728-sudo" class="text-[#0a1f1c] hover:text-green-700"><i class="fa-brands fa-github"></i></a>
             <a href="mailto:juliacarolina728@gmail.com" class="text-[#0a1f1c] hover:text-green-700"><i class="fa-brands fa-envelope"></i></a>
         </div>
-         
-
     </footer>
-    <!-- MODAL 1 -->
-<div id="modal-radar"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-     <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#projetos" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>Radar Cidadão</h2>
-        <p>O Radar Cidadão é um projeto desenvolvido com o objetivo de promover maior transparência e acessibilidade aos dados públicos, permitindo a análise do desempenho </p>
-        <p>de Deputados Federais em processo de reeleição por meio de dados da API da Câmara dos Deputados</p>
-        <p>O desenvolvimento foi realizado em equipe, sendo organizado em sprints.</p> 
-        <p> <strong>Na Sprint 1, fui responsável pela prototipação da interface no Figma e pelo desenvolvimento do front-end utilizando HTML e Tailwind CSS. </strong></p> 
-        <p><strong>Na Sprint 2, atuei na modelagem e implementação das estruturas do banco de dados utilizando Python, com apoio do Google Colab, além da configuração do ambiente em nuvem na AWS</strong></p>
-        <p class="text-green-600 underline"><a href="https://github.com/APILumina/API1_DSM_Lumina" target="_blank">Acesse o repositório no GitHub</a></p>
+
+    <div id="modal-radar" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex p-4">
+         <div class="bg-[#f3f0e2] p-6 md:p-8 rounded-xl max-w-3xl w-full relative z-10 text-[#0a1f1c] max-h-[90vh] overflow-y-auto">
+            <a href="#projetos" class="absolute top-4 right-4 text-[#446e3e] text-3xl font-light hover:text-green-800 transition-colors">&times;</a>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-4">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold border-b border-green-800/20 pb-2">Radar Cidadão</h2>
+                    <p class="text-sm leading-relaxed text-gray-700">O Radar Cidadão promove maior transparência aos dados públicos, permitindo a análise do desempenho de Deputados Federais por meio da API da Câmara dos Deputados.</p>
+                    <p class="text-sm leading-relaxed text-gray-700">Desenvolvido em equipe e organizado em sprints:</p> 
+                    <p class="text-sm text-gray-800"><strong>Sprint 1:</strong> Prototipação no Figma e desenvolvimento front-end com HTML e Tailwind CSS.</p> 
+                    <p class="text-sm text-gray-800"><strong>Sprint 2:</strong> Modelagem do banco de dados em Python (Google Colab) e infraestrutura na AWS.</p>
+                    <p class="text-sm text-gray-800"><strong>Sprint 3:</strong> Ajuste de filtros de pesquisa, ajustes nas imagens de graficos do frontend.</p>
+                    <div class="pt-2">
+                        <a href="https://github.com/APILumina/API1_DSM_Lumina" target="_blank" class="inline-block bg-[#1b441d] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
+                            <i class="fa-brands fa-github mr-2"></i>Ver Repositório
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center bg-white/50 p-4 rounded-lg border border-gray-200 shadow-inner">
+                    <img src="Gravando 2026-06-16 161941.gif" alt="Radar Cidadão" class="max-h-64 object-contain rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="modal-serpentes" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex p-4">
+         <div class="bg-[#f3f0e2] p-6 md:p-8 rounded-xl max-w-3xl w-full relative z-10 text-[#0a1f1c] max-h-[90vh] overflow-y-auto">
+            <a href="#projetos" class="absolute top-4 right-4 text-[#446e3e] text-3xl font-light hover:text-green-800 transition-colors">&times;</a>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-4">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold border-b border-green-800/20 pb-2">ID. serpentes</h2>
+                    <p class="text-sm leading-relaxed text-gray-700">Aplicação desenvolvida para auxiliar na identificação de serpentes nativas do estado de São Paulo, focada em educação ambiental e prevenção de acidentes.</p>
+                        <p class="text-sm leading-relaxed text-gray-700">O sistema utiliza chaves dicotômicas para guiar o usuário por meio de perguntas sobre características morfológicas, habitat e comportamento, facilitando a identificação correta da espécie.</p>
+                        <p class="text-sm leading-relaxed text-gray-700">Desenvolvido com Flask, o projeto inclui um banco de dados de espécies, imagens ilustrativas e uma interface intuitiva para promover a conscientização sobre a fauna local.</p>
+                    
+                    <div class="pt-2">
+                        <a href="https://github.com/juliacarolina728-sudo/chave-serpentes" target="_blank" class="inline-block bg-[#1b441d] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
+                            <i class="fa-brands fa-github mr-2"></i>Ver Repositório
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center bg-white/50 p-4 rounded-lg border border-gray-200 shadow-inner">
+                    <img src="" alt="ID. serpentes" class="max-h-64 object-contain rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-site" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex p-4">
+        <div class="bg-[#f3f0e2] p-6 md:p-8 rounded-xl max-w-3xl w-full relative z-10 text-[#0a1f1c] max-h-[90vh] overflow-y-auto">
+            <a href="#projetos" class="absolute top-4 right-4 text-[#446e3e] text-3xl font-light hover:text-green-800 transition-colors">&times;</a>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-4">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold border-b border-green-800/20 pb-2">Primeiro Site</h2>
+                    <p class="text-sm leading-relaxed text-gray-700">Projeto desenvolvido na disciplina de Desenvolvimento Web na FATEC para aplicar os fundamentos de interfaces dinâmicas.</p>
+                    <p class="text-sm leading-relaxed text-gray-700">O sistema simula uma faculdade fictícia completa, contendo páginas institucionais de cursos, navegação estruturada e formulário funcional de contato.</p>
+                    <div class="pt-4">
+                        <a href="https://github.com/juliacarolina728-sudo/usat-faculdade-fic/tree/main" target="_blank" class="inline-block bg-[#1b441d] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
+                            <i class="fa-brands fa-github mr-2"></i>Ver Repositório
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center bg-white/50 p-2 rounded-lg border border-gray-200 shadow-inner">
+                    <img src="Gravando 2026-06-16 155739.gif" alt="Print do Primeiro Site" class="w-full max-h-64 object-cover rounded shadow-md">
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="modal-pibid" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex p-4">
+    <div class="bg-[#f3f0e2] p-6 md:p-8 rounded-xl max-w-3xl w-full relative z-10 text-[#0a1f1c] max-h-[90vh] overflow-y-auto">
+
+        <a href="#projetos" class="absolute top-4 right-4 text-[#446e3e] text-3xl font-light hover:text-green-800 transition-colors">
+            &times;
+        </a>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+
+            
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold border-b border-green-800/20 pb-2">
+                    PIBID
+                </h2>
+
+                <p class="text-sm leading-relaxed text-gray-700">
+                    Atuação como Bolsista de Iniciação à Docência - PIBID/CAPES pela Universidade UNESP, durante o período de 2017 a 2018.
+                </p>
+
+                <p class="text-sm leading-relaxed text-gray-700">
+                    Desenvolvimento de atividades práticas no ensino de ciências, apoio em sala de aula e criação de materiais didáticos.
+                </p>
+            </div> 
+           <div class="flex items-center justify-center bg-white/50 p-2 rounded-lg border border-gray-200 shadow-inner">
+           <img src="pibid.png" alt="Experiência em docência" class="w-full h-auto rounded-lg">
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+    <div id="modal-professora" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-50 target:flex p-4">
+    <div class="bg-[#f3f0e2] p-8 rounded-2xl max-w-4xl w-full relative z-10 text-[#0a1f1c] shadow-2xl">
+     
+        <a href="#certificados" class="absolute top-4 right-6 text-green-900 text-4xl hover:text-green-600 transition-colors">&times;</a>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+           
+            <div>
+                <h2 class="text-3xl font-bold mb-4 font-serif">Professora</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Experiência em regência de classes de Ciências Biológicas na Secretaria de Estado da Educação, 
+                    aplicando metodologias ativas, didática científica e comunicação acessível.
+                </p>
+                <span class="inline-block bg-green-800/10 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-green-800/20">
+                    Educação Estadual
+                </span>
+            </div>
+            <div class="border-4 border-white rounded-lg shadow-xl overflow-hidden bg-gray-200 h-64 flex items-center justify-center">
+                <img src="pngtree-cozy-classroom-setting-with-chalkboard-and-bookshelves-image_18879294.webp" alt="Experiência como Professora" class="w-full h-full object-cover">
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- MODAL 2 -->
-<div id="modal-site"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-    <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#projetos" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>Primeiro Site</h2>
-        <p>Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Web na FATEC,com o objetivo </P>
-       <P> de aplicar os fundamentos de construção de interfaces web utilizando HTML e CSS. </P>
-       <P>O site simula uma faculdade fictícia, contendo páginas institucionais, navegação entre seções e um formulário de contato.</p>
-       <p class="text-green-600 underline"><a href="https://github.com/juliacarolina728-sudo/usat-faculdade-fic/tree/main" target="_blank">Acesse o repositório no GitHub</a></p>
+   <div id="modal-laboratorio" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-50 target:flex p-4">
+    <div class="bg-[#f3f0e2] p-8 rounded-2xl max-w-4xl w-full relative z-10 text-[#0a1f1c] shadow-2xl">
+ 
+        <a href="#certificados" class="absolute top-4 right-6 text-green-900 text-4xl hover:text-green-600 transition-colors">&times;</a>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+           
+            <div>
+                <h2 class="text-3xl font-bold mb-4 font-serif">Técnico de Laboratório</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Atuação técnica na Anhanguera Educacional, gerenciando a organização de insumos, calibração de equipamentos científicos, 
+                    aplicação de normas de biossegurança e documentação de processos acadêmicos.
+                </p>
+                <span class="inline-block bg-green-800/10 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-green-800/20">
+                    Anhanguera Educacional
+                </span>
+            </div>
+
+
+            <div class="border-4 border-white rounded-lg shadow-xl overflow-hidden bg-gray-200 h-64 flex items-center justify-center">
+                <img src="images.jpg" alt="Atuação no Laboratório" class="w-full h-full object-cover">
+            </div>
+        </div>
     </div>
 </div>
-<!-- MODAL 3 -->
-<div id="modal-pibid"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-    <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#projetos" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>PIBID</h2>
-        <p>Bolsista de Iniciação à Docência - PIBID/CAPES pela Universidade UNESP, de 2017 a 2018</p>
+   <div id="modal-obmep" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-50 target:flex p-4">
+    <div class="bg-[#f3f0e2] p-8 rounded-2xl max-w-4xl w-full relative z-10 text-[#0a1f1c] shadow-2xl">
+        <a href="#extracurriculares" class="absolute top-4 right-6 text-green-900 text-4xl hover:text-green-600 transition-colors">&times;</a>   
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 font-serif">OBMEP</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Atuação voluntária na organização local da Olimpíada Brasileira de Matemática, 
+                    prestando suporte logístico, controle de aplicação de exames e engajamento 
+                    dos estudantes no evento.
+                </p>
+                <span class="inline-block bg-green-800/10 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-green-800/20">
+                    Voluntariado
+                </span>
+            </div>
+            <div class="border-4 border-white rounded-lg shadow-xl overflow-hidden bg-gray-200 h-64 flex items-center justify-center">
+                <!-- Substitua pelo nome do seu arquivo de imagem da OBMEP -->
+                <img src="WhatsApp Image 2026-05-15 at 21.08.10.jpeg" alt="Atuação na OBMEP" class="w-full h-full object-cover">
+            </div>
+        </div>
     </div>
 </div>
-<!-- MODAL 4 -->
-<div id="modal-professora"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-    <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#certificados" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>Professora</h2>
-        <p>Atuação como professora de Ciências Biológicas na Secretaria de Estado da Educação.</p>
-       
-    </div>
-</div>
-<!-- MODAL 5 -->
-<div id="modal-laboratorio"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-    <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#certificados" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>Técnico de Laboratório</h2>
-        <p>Atuação como técnico de laboratório na Anhanguera Educacional.</p>
-    </div>
-</div>
-<!-- MODAL 6 -->
-<div id="modal-obmep"
-     class="fixed inset-0 hidden items-center justify-center bg-black/70 z-50 target:flex">
-    <div class="bg-[#f3f0e2] p-8 rounded-xl max-w-lg w-full relative z-10">
-        <a href="#projetos" class="absolute top-3 right-4 text-[#446e3e] text-2xl">&times;</a>
-        <h2>Olimpíada Brasileira de Matemática</h2>
-        <p>Atuei como voluntária na organização da OBMEP, contribuindo no suporte à realização das atividades e apoio ao evento.</p>
+<div id="modal-maratona" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-50 target:flex p-4">
+    <div class="bg-[#f3f0e2] p-8 rounded-2xl max-w-4xl w-full relative z-10 text-[#0a1f1c] shadow-2xl">
+        <a href="#extracurriculares" class="absolute top-4 right-6 text-green-900 text-4xl hover:text-green-600 transition-colors">&times;</a>   
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 font-serif"> Maratona de Programação InterFatecs</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                   Vivência intensa em ambiente competitivo, focada em algoritmos, lógica complexa e trabalho em equipe. 
+                    Conquistar o balão durante a prova foi a marca da nossa resolução de um dos problemas propostos! 🎈
+                </p>
+                <span class="inline-block bg-green-800/10 text-green-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-green-800/20">
+                    Maratona
+                </span>
+            </div>
+            <div class="border-4 border-white rounded-lg shadow-xl overflow-hidden bg-gray-200 h-64 flex items-center justify-center">
+                
+                <img src="maratona.jpeg" alt="Atuação na Maratona" class="w-full h-full object-cover">
+            </div>
+        </div>
     </div>
 </div>
 
